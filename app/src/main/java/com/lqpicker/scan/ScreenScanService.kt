@@ -28,6 +28,8 @@ import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import com.lqpicker.Hero
 import com.lqpicker.HeroRepository
+import com.lqpicker.ItemAdvisor
+import com.lqpicker.OwnedPrefs
 import com.lqpicker.MainActivity
 import com.lqpicker.R
 import com.lqpicker.Suggestion
