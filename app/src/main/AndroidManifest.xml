@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Chỉ dùng cho tính năng quét màn hình tuỳ chọn (người dùng tự bật, hệ thống hỏi xác nhận).
          SYSTEM_ALERT_WINDOW: chỉ để hiện bong bóng gợi ý (người dùng tự cấp trong Cài đặt).
@@ -8,6 +9,11 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Thư viện ML Kit tự thêm quyền mạng (để gửi số liệu sử dụng). Gỡ bỏ: OCR vẫn chạy offline,
+         và app không gửi bất kỳ dữ liệu nào ra ngoài. -->
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
 
     <application
         android:allowBackup="true"
