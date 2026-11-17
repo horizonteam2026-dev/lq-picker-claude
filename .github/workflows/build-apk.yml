@@ -24,22 +24,30 @@ jobs:
         with:
           gradle-version: "8.7"
 
-      # Khoá ký nằm trong Secrets của repo, không nằm trong code công khai.
+      # Khoá ký nằm trong repo ở dạng ĐÃ MÃ HOÁ (signing/lqpicker.jks.enc).
+      # Mật khẩu giải mã chỉ nằm trong Secrets của repo (KEYSTORE_PASSWORD), không công khai.
       - name: Khôi phục khoá ký
+        id: key
         env:
-          KS_B64: ${{ secrets.KEYSTORE_BASE64 }}
           KS_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
         run: |
-          if [ -n "$KS_B64" ]; then
-            echo "$KS_B64" | base64 -d > lqpicker.jks
+          if [ -n "$KS_PASS" ] && [ -f signing/lqpicker.jks.enc ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in signing/lqpicker.jks.enc -out lqpicker.jks -pass env:KS_PASS
             printf 'storeFile=lqpicker.jks\nstorePassword=%s\nkeyAlias=lqpicker\nkeyPassword=%s\n' "$KS_PASS" "$KS_PASS" > keystore.properties
             echo "Đã khôi phục khoá ký."
+            echo "signed=true" >> "$GITHUB_OUTPUT"
           else
             echo "Không có khoá ký trong Secrets: APK sẽ ký bằng khoá debug."
           fi
 
       - name: Build APK
-        run: gradle :app:assembleRelease --no-daemon --stacktrace
+        # Thử lại tối đa 3 lần nếu máy chủ thư viện lỗi tạm thời.
+        run: |
+          for i in 1 2 3; do
+            gradle :app:assembleRelease --no-daemon --stacktrace && exit 0
+            echo "Build lỗi, thử lại lần $((i+1)) sau 30 giây..."; sleep 30
+          done
+          exit 1
 
       - name: Đổi tên APK
         run: cp app/build/outputs/apk/release/app-release.apk LQPicker-v1.0.${{ github.run_number }}.apk
@@ -50,7 +58,8 @@ jobs:
           path: LQPicker-v1.0.${{ github.run_number }}.apk
 
       - name: Đăng bản phát hành
-        if: github.repository == 'horizonteam2026-dev/lq-picker-claude'
+        # Chỉ đăng bản chính thức khi APK được ký bằng khoá thật (để các bản sau cài đè được).
+        if: steps.key.outputs.signed == 'true' && github.repository == 'horizonteam2026-dev/lq-picker-claude'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
