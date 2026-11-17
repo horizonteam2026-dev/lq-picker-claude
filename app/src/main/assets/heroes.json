@@ -1,0 +1,2717 @@
+{
+ "version": 2,
+ "heroes": [
+  {
+   "id": "keera",
+   "name": "Keera",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "theflash",
+   "name": "The Flash",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "quillen",
+   "name": "Quillen",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "raz",
+   "name": "Raz",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 1,
+    "cc": 1,
+    "mob": 2,
+    "sus": 0,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "kine",
+   "name": "Kine",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "murad",
+   "name": "Murad",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE",
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 1,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 1
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "enzo",
+   "name": "Enzo",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "ngokhong",
+   "name": "Ngộ Không",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "sinestrea",
+   "name": "Sinestrea",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE",
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "bright",
+   "name": "Bright",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "TOP",
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "zata",
+   "name": "Zata",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "MID",
+    "JUNGLE"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 1,
+    "mob": 3,
+    "sus": 0,
+    "rng": 1,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "paine",
+   "name": "Paine",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "nakroth",
+   "name": "Nakroth",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "butterfly",
+   "name": "Butterfly",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 3,
+    "cc": 0,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 1
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "aoi",
+   "name": "Aoi",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "zuka",
+   "name": "Zuka",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "TOP",
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "airi",
+   "name": "Airi",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 3,
+    "cc": 0,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "zephys",
+   "name": "Zephys",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "TOP",
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "qi",
+   "name": "Qi",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE",
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "liliana",
+   "name": "Liliana",
+   "cls": "MAGE",
+   "lanes": [
+    "MID",
+    "JUNGLE"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 1,
+    "cc": 1,
+    "mob": 2,
+    "sus": 0,
+    "rng": 2,
+    "eng": 0,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "volkath",
+   "name": "Volkath",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP",
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "ryoma",
+   "name": "Ryoma",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "TOP",
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "astrid",
+   "name": "Astrid",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "yan",
+   "name": "Yan",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE",
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "kriknak",
+   "name": "Kriknak",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 1,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "zill",
+   "name": "Zill",
+   "cls": "ASSASSIN",
+   "lanes": [
+    "JUNGLE",
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 3,
+    "sus": 0,
+    "rng": 1,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "veres",
+   "name": "Veres",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP",
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "richter",
+   "name": "Richter",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP",
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 1,
+    "sus": 2,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "rourke",
+   "name": "Rourke",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP",
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "arthur",
+   "name": "Arthur",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 1,
+    "dps": 2,
+    "cc": 0,
+    "mob": 1,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 1
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "superman",
+   "name": "Superman",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "trieuvan",
+   "name": "Triệu Vân",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP",
+    "JUNGLE"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "omen",
+   "name": "Omen",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 1,
+    "sus": 2,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 1
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "maloch",
+   "name": "Maloch",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 2,
+    "dps": 2,
+    "cc": 2,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "skud",
+   "name": "Skud",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 2,
+    "dps": 2,
+    "cc": 2,
+    "mob": 1,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "tachi",
+   "name": "Tachi",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "lubo",
+   "name": "Lữ Bố",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 2,
+    "dps": 2,
+    "cc": 2,
+    "mob": 2,
+    "sus": 2,
+    "rng": 0,
+    "eng": 3,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "kilgroth",
+   "name": "Kil'Groth",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "errol",
+   "name": "Errol",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "wiro",
+   "name": "Wiro",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 1,
+    "dps": 2,
+    "cc": 2,
+    "mob": 1,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "florentino",
+   "name": "Florentino",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 3,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "amily",
+   "name": "Amily",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "allain",
+   "name": "Allain",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 2,
+    "sus": 2,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "roxie",
+   "name": "Roxie",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP",
+    "SUP"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 2,
+    "burst": 2,
+    "dps": 2,
+    "cc": 2,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "wonderwoman",
+   "name": "Wonder Woman",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "taara",
+   "name": "Taara",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 2,
+    "dps": 2,
+    "cc": 2,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "dextra",
+   "name": "Dextra",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 2,
+    "dps": 2,
+    "cc": 2,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "yena",
+   "name": "Yena",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 2,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 3,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "arduin",
+   "name": "Arduin",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 1,
+    "dps": 2,
+    "cc": 2,
+    "mob": 1,
+    "sus": 1,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 1
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "bijan",
+   "name": "Bijan",
+   "cls": "WARRIOR",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 1,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "dirak",
+   "name": "Dirak",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 1,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "preyta",
+   "name": "Preyta",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 1,
+    "sus": 1,
+    "rng": 2,
+    "eng": 0,
+    "push": 0,
+    "prc": 1
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "natalya",
+   "name": "Natalya",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 1,
+    "cc": 1,
+    "mob": 2,
+    "sus": 0,
+    "rng": 2,
+    "eng": 0,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "ignis",
+   "name": "Ignis",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "lauriel",
+   "name": "Lauriel",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 2,
+    "sus": 1,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "dieuthuyen",
+   "name": "Điêu Thuyền",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 3,
+    "sus": 1,
+    "rng": 1,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "veera",
+   "name": "Veera",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 1,
+    "cc": 1,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "marja",
+   "name": "Marja",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 0,
+    "mob": 1,
+    "sus": 2,
+    "rng": 2,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "tulen",
+   "name": "Tulen",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "krixi",
+   "name": "Krixi",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "mganga",
+   "name": "Mganga",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "kahlii",
+   "name": "Kahlii",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 2,
+    "mob": 2,
+    "sus": 1,
+    "rng": 2,
+    "eng": 0,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "yue",
+   "name": "Yue",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "annette",
+   "name": "Annette",
+   "cls": "MAGE",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 2,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "sephera",
+   "name": "Sephera",
+   "cls": "MAGE",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 2,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "ilumia",
+   "name": "Ilumia",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 2,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "ishar",
+   "name": "Ishar",
+   "cls": "MAGE",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 2,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "jinna",
+   "name": "Jinna",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "lorion",
+   "name": "Lorion",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 2,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "aleister",
+   "name": "Aleister",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "azzenka",
+   "name": "Azzen'Ka",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 3,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 0,
+    "rng": 2,
+    "eng": 1,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "darcy",
+   "name": "D'Arcy",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "iggy",
+   "name": "Iggy",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "bonnie",
+   "name": "Bonnie",
+   "cls": "MAGE",
+   "lanes": [
+    "MID"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 2,
+    "cc": 1,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "celica",
+   "name": "Celica",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "T",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "capheny",
+   "name": "Capheny",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 2,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "elandorr",
+   "name": "Eland'orr",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "laville",
+   "name": "Laville",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "moren",
+   "name": "Moren",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "valhein",
+   "name": "Valhein",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC",
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 3,
+    "cc": 1,
+    "mob": 2,
+    "sus": 0,
+    "rng": 2,
+    "eng": 1,
+    "push": 1,
+    "prc": 1
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "yorn",
+   "name": "Yorn",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "violet",
+   "name": "Violet",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 1,
+    "mob": 0,
+    "sus": 1,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "wisp",
+   "name": "Wisp",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 0,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "elsu",
+   "name": "Elsu",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 2,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "hayate",
+   "name": "Hayate",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "telannas",
+   "name": "Tel'Annas",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "lindis",
+   "name": "Lindis",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 2,
+    "dps": 3,
+    "cc": 0,
+    "mob": 2,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "fennik",
+   "name": "Fennik",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "slimz",
+   "name": "Slimz",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 2,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "joker",
+   "name": "Joker",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "thorne",
+   "name": "Thorne",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "teeri",
+   "name": "Teeri",
+   "cls": "MARKSMAN",
+   "lanes": [
+    "ADC"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 0,
+    "burst": 1,
+    "dps": 3,
+    "cc": 0,
+    "mob": 1,
+    "sus": 0,
+    "rng": 3,
+    "eng": 0,
+    "push": 1,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "zip",
+   "name": "Zip",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "T",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "krizzix",
+   "name": "Krizzix",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "teemee",
+   "name": "TeeMee",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "T",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "helen",
+   "name": "Helen",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "T",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "arum",
+   "name": "Arum",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "cresht",
+   "name": "Cresht",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "grakk",
+   "name": "Grakk",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "lumburr",
+   "name": "Lumburr",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "alice",
+   "name": "Alice",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 0,
+    "burst": 0,
+    "dps": 0,
+    "cc": 1,
+    "mob": 1,
+    "sus": 3,
+    "rng": 1,
+    "eng": 0,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "aya",
+   "name": "Aya",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "T",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "rouie",
+   "name": "Rouie",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "T",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "toro",
+   "name": "Toro",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "gildur",
+   "name": "Gildur",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "chaugnar",
+   "name": "Chaugnar",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "mina",
+   "name": "Mina",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "T",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "baldum",
+   "name": "Baldum",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "xeniel",
+   "name": "Xeniel",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "omega",
+   "name": "Omega",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP",
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 1,
+    "sus": 2,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "peura",
+   "name": "Peura",
+   "cls": "SUPPORT",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 2,
+    "burst": 0,
+    "dps": 1,
+    "cc": 2,
+    "mob": 2,
+    "sus": 1,
+    "rng": 1,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "max",
+   "name": "Max",
+   "cls": "TANK",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 3,
+    "burst": 0,
+    "dps": 1,
+    "cc": 3,
+    "mob": 1,
+    "sus": 0,
+    "rng": 0,
+    "eng": 3,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "thane",
+   "name": "Thane",
+   "cls": "TANK",
+   "lanes": [
+    "SUP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 3,
+    "burst": 0,
+    "dps": 1,
+    "cc": 3,
+    "mob": 1,
+    "sus": 1,
+    "rng": 0,
+    "eng": 3,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "ormarr",
+   "name": "Ormarr",
+   "cls": "TANK",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 3,
+    "burst": 1,
+    "dps": 1,
+    "cc": 2,
+    "mob": 2,
+    "sus": 1,
+    "rng": 0,
+    "eng": 3,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "ata",
+   "name": "Ata",
+   "cls": "TANK",
+   "lanes": [
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 3,
+    "burst": 0,
+    "dps": 1,
+    "cc": 3,
+    "mob": 1,
+    "sus": 0,
+    "rng": 0,
+    "eng": 3,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "ybneth",
+   "name": "Y'bneth",
+   "cls": "TANK",
+   "lanes": [
+    "TOP",
+    "SUP"
+   ],
+   "dmg": "M",
+   "t": {
+    "tank": 3,
+    "burst": 1,
+    "dps": 1,
+    "cc": 3,
+    "mob": 1,
+    "sus": 0,
+    "rng": 0,
+    "eng": 2,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  },
+  {
+   "id": "truongphi",
+   "name": "Trương Phi",
+   "cls": "TANK",
+   "lanes": [
+    "SUP",
+    "TOP"
+   ],
+   "dmg": "P",
+   "t": {
+    "tank": 3,
+    "burst": 0,
+    "dps": 1,
+    "cc": 3,
+    "mob": 1,
+    "sus": 0,
+    "rng": 0,
+    "eng": 3,
+    "push": 0,
+    "prc": 0
+   },
+   "counters": [],
+   "weak": []
+  }
+ ]
+}
