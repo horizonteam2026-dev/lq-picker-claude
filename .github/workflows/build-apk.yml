@@ -41,7 +41,8 @@ jobs:
               echo "signed=true" >> "$GITHUB_OUTPUT"
             else
               rm -f lqpicker.jks
-              echo "::warning::Mật khẩu KEYSTORE_PASSWORD không đúng (độ dài ${#KS_PASS} ký tự, cần 24). APK sẽ ký bằng khoá debug và KHÔNG đăng bản chính thức."
+              FP=$(printf '%s' "$KS_PASS" | sha256sum | cut -c1-8)
+              echo "::warning::Mật khẩu KEYSTORE_PASSWORD không đúng (độ dài ${#KS_PASS}, cần 24; vân tay $FP, cần 4ab5af5e). APK sẽ ký bằng khoá debug và KHÔNG đăng bản chính thức."
             fi
           else
             echo "Không có khoá ký trong Secrets: APK sẽ ký bằng khoá debug."
