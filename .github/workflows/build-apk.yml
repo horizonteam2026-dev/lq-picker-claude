@@ -24,25 +24,25 @@ jobs:
         with:
           gradle-version: "8.7"
 
-      # Khoá ký nằm trong repo ở dạng ĐÃ MÃ HOÁ (signing/lqpicker.jks.enc).
+      # Khoá ký (lqpicker.jks + keystore.properties) nằm trong repo ở dạng ĐÃ MÃ HOÁ: signing/signing.tar.enc.
       # Mật khẩu giải mã chỉ nằm trong Secrets của repo (KEYSTORE_PASSWORD), không công khai.
       - name: Khôi phục khoá ký
         id: key
         env:
           KS_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
         run: |
-          # Bỏ dấu cách/xuống dòng và tiền tố "storePassword=" nếu lỡ dán kèm.
-          KS_PASS=$(printf '%s' "$KS_PASS" | tr -d '[:space:]' | sed 's/^storePassword=//')
+          # Bỏ dấu cách/xuống dòng, đổi về chữ thường (bàn phím điện thoại hay tự viết hoa chữ đầu).
+          KS_PASS=$(printf '%s' "$KS_PASS" | tr -d '[:space:]' | tr 'A-Z' 'a-z')
           export KS_PASS
-          if [ -n "$KS_PASS" ] && [ -f signing/lqpicker.jks.enc ]; then
-            if openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in signing/lqpicker.jks.enc -out lqpicker.jks -pass env:KS_PASS; then
-              printf 'storeFile=lqpicker.jks\nstorePassword=%s\nkeyAlias=lqpicker\nkeyPassword=%s\n' "$KS_PASS" "$KS_PASS" > keystore.properties
+          if [ -n "$KS_PASS" ] && [ -f signing/signing.tar.enc ]; then
+            if openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in signing/signing.tar.enc -pass env:KS_PASS -out signing.tar; then
+              tar -xf signing.tar && rm -f signing.tar
               echo "Đã khôi phục khoá ký."
               echo "signed=true" >> "$GITHUB_OUTPUT"
             else
-              rm -f lqpicker.jks
+              rm -f signing.tar
               FP=$(printf '%s' "$KS_PASS" | sha256sum | cut -c1-8)
-              echo "::warning::Mật khẩu KEYSTORE_PASSWORD không đúng (độ dài ${#KS_PASS}, cần 24; vân tay $FP, cần 4ab5af5e). APK sẽ ký bằng khoá debug và KHÔNG đăng bản chính thức."
+              echo "::warning::Mật khẩu KEYSTORE_PASSWORD không đúng (độ dài ${#KS_PASS}, cần 19; vân tay $FP, cần 7c371856). APK sẽ ký bằng khoá debug và KHÔNG đăng bản chính thức."
             fi
           else
             echo "Không có khoá ký trong Secrets: APK sẽ ký bằng khoá debug."
