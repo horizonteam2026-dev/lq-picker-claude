@@ -31,11 +31,18 @@ jobs:
         env:
           KS_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
         run: |
+          # Bỏ dấu cách/xuống dòng và tiền tố "storePassword=" nếu lỡ dán kèm.
+          KS_PASS=$(printf '%s' "$KS_PASS" | tr -d '[:space:]' | sed 's/^storePassword=//')
+          export KS_PASS
           if [ -n "$KS_PASS" ] && [ -f signing/lqpicker.jks.enc ]; then
-            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in signing/lqpicker.jks.enc -out lqpicker.jks -pass env:KS_PASS
-            printf 'storeFile=lqpicker.jks\nstorePassword=%s\nkeyAlias=lqpicker\nkeyPassword=%s\n' "$KS_PASS" "$KS_PASS" > keystore.properties
-            echo "Đã khôi phục khoá ký."
-            echo "signed=true" >> "$GITHUB_OUTPUT"
+            if openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in signing/lqpicker.jks.enc -out lqpicker.jks -pass env:KS_PASS; then
+              printf 'storeFile=lqpicker.jks\nstorePassword=%s\nkeyAlias=lqpicker\nkeyPassword=%s\n' "$KS_PASS" "$KS_PASS" > keystore.properties
+              echo "Đã khôi phục khoá ký."
+              echo "signed=true" >> "$GITHUB_OUTPUT"
+            else
+              rm -f lqpicker.jks
+              echo "::warning::Mật khẩu KEYSTORE_PASSWORD không đúng (độ dài ${#KS_PASS} ký tự, cần 24). APK sẽ ký bằng khoá debug và KHÔNG đăng bản chính thức."
+            fi
           else
             echo "Không có khoá ký trong Secrets: APK sẽ ký bằng khoá debug."
           fi
