@@ -9,44 +9,67 @@ import androidx.lifecycle.AndroidViewModel
 import com.lqpicker.scan.ScanBus
 import com.lqpicker.scan.ScanResult
 
-enum class Team { ALLY, ENEMY, BAN }
+/** SELF = tướng của bạn; ALLY = đồng đội; ENEMY = đối thủ; BAN = tướng bị cấm. */
+enum class Team { SELF, ALLY, ENEMY, BAN }
 
 /** Ô đang được chọn tướng. Với BAN, index = -1 nghĩa là thêm tướng cấm mới. */
 data class PickTarget(val team: Team, val index: Int)
 
 class DraftViewModel(app: Application) : AndroidViewModel(app) {
 
+    private val appCtx: Application = app
     val heroes: List<Hero> = HeroRepository.load(app)
     private val byId: Map<String, Hero> = heroes.associateBy { it.id }
 
+    /** null = chưa thiết lập (coi như có đủ tướng). */
+    var owned by mutableStateOf<Set<String>?>(OwnedPrefs.load(app))
+        private set
+    var self by mutableStateOf<String?>(null)
+        private set
+    /** Ô 0 là bạn (đã tách sang self), 4 ô đồng đội còn lại. */
     var allies by mutableStateOf<List<String?>>(List(ALLY_SLOTS) { null })
         private set
     var enemies by mutableStateOf<List<String?>>(List(ENEMY_SLOTS) { null })
         private set
     var bans by mutableStateOf<List<String>>(emptyList())
         private set
-    val lane: Lane? get() = ScanBus.lane
     var picker by mutableStateOf<PickTarget?>(null)
         private set
+    var showOwned by mutableStateOf(false)
+        private set
+
+    val lane: Lane? get() = ScanBus.lane
 
     fun hero(id: String?): Hero? = if (id == null) null else byId[id]
 
+    val ownedHeroes: List<Hero> get() = OwnedPrefs.filter(heroes, owned)
+
     private fun takenIds(): Set<String> {
         val s = HashSet<String>()
+        self?.let { s.add(it) }
         allies.forEach { if (it != null) s.add(it) }
         enemies.forEach { if (it != null) s.add(it) }
         s.addAll(bans)
         return s
     }
 
-    /** Tướng có thể chọn cho ô hiện tại (loại các tướng đã dùng, trừ chính ô đó). */
+    /** Tướng có thể gợi ý: đã sở hữu, đúng vị trí, chưa bị chọn hay cấm. */
+    private fun pool(): List<Hero> {
+        val taken = takenIds()
+        val l = lane
+        return ownedHeroes.filter { it.id !in taken && (l == null || l in it.lanes) }
+    }
+
+    /** Tướng có thể chọn cho ô hiện tại. Ô "Bạn" chỉ hiện tướng đã sở hữu. */
     fun availableFor(target: PickTarget): List<Hero> {
         val current = currentId(target)
         val taken = takenIds()
-        return heroes.filter { it.id !in taken || it.id == current }
+        val source = if (target.team == Team.SELF) ownedHeroes else heroes
+        return source.filter { it.id !in taken || it.id == current }
     }
 
     fun currentId(target: PickTarget): String? = when (target.team) {
+        Team.SELF -> self
         Team.ALLY -> allies.getOrNull(target.index)
         Team.ENEMY -> enemies.getOrNull(target.index)
         Team.BAN -> bans.getOrNull(target.index)
@@ -54,7 +77,7 @@ class DraftViewModel(app: Application) : AndroidViewModel(app) {
 
     val suggestions: List<Suggestion> by derivedStateOf {
         SuggestionEngine.suggest(
-            pool = heroes,
+            pool = pool(),
             allies = allies.mapNotNull { hero(it) },
             enemies = enemies.mapNotNull { hero(it) },
             lane = lane,
@@ -62,15 +85,41 @@ class DraftViewModel(app: Application) : AndroidViewModel(app) {
         )
     }
 
+    val notes: List<String> by derivedStateOf {
+        SuggestionEngine.analyze(allies.mapNotNull { hero(it) }, enemies.mapNotNull { hero(it) })
+    }
+
+    val itemTips: List<String> by derivedStateOf {
+        ItemAdvisor.advise(hero(self), allies.mapNotNull { hero(it) }, enemies.mapNotNull { hero(it) })
+    }
+
     val hasAnyPick: Boolean
-        get() = allies.any { it != null } || enemies.any { it != null }
+        get() = self != null || allies.any { it != null } || enemies.any { it != null }
 
     fun selectLane(l: Lane?) {
         ScanBus.lane = if (ScanBus.lane == l) null else l
     }
 
-    val notes: List<String> by derivedStateOf {
-        SuggestionEngine.analyze(allies.mapNotNull { hero(it) }, enemies.mapNotNull { hero(it) })
+    fun openPicker(target: PickTarget) {
+        picker = target
+    }
+
+    fun closePicker() {
+        picker = null
+    }
+
+    fun openOwned() {
+        showOwned = true
+    }
+
+    fun closeOwned() {
+        showOwned = false
+    }
+
+    /** Lưu danh sách tướng đã sở hữu. null = có tất cả. */
+    fun setOwned(ids: Set<String>?) {
+        owned = ids
+        OwnedPrefs.save(appCtx, ids)
     }
 
     private var lastScan = 0L
@@ -85,17 +134,10 @@ class DraftViewModel(app: Application) : AndroidViewModel(app) {
         if (e.isNotEmpty()) enemies = List(ENEMY_SLOTS) { e.getOrNull(it) }
     }
 
-    fun openPicker(target: PickTarget) {
-        picker = target
-    }
-
-    fun closePicker() {
-        picker = null
-    }
-
     fun pick(heroId: String) {
         val t = picker ?: return
         when (t.team) {
+            Team.SELF -> self = heroId
             Team.ALLY -> allies = allies.toMutableList().also { it[t.index] = heroId }
             Team.ENEMY -> enemies = enemies.toMutableList().also { it[t.index] = heroId }
             Team.BAN -> bans = if (t.index in bans.indices) {
@@ -110,6 +152,7 @@ class DraftViewModel(app: Application) : AndroidViewModel(app) {
     fun clearCurrent() {
         val t = picker ?: return
         when (t.team) {
+            Team.SELF -> self = null
             Team.ALLY -> allies = allies.toMutableList().also { it[t.index] = null }
             Team.ENEMY -> enemies = enemies.toMutableList().also { it[t.index] = null }
             Team.BAN -> if (t.index in bans.indices) {
@@ -124,6 +167,7 @@ class DraftViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun reset() {
+        self = null
         allies = List(ALLY_SLOTS) { null }
         enemies = List(ENEMY_SLOTS) { null }
         bans = emptyList()

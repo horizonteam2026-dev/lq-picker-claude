@@ -1,19 +1,28 @@
 package com.lqpicker.ui
 
+import android.content.Context
+import android.graphics.BitmapFactory
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -68,10 +77,31 @@ fun initials(name: String): String {
     }
 }
 
-/** Avatar tướng vẽ bằng màu + chữ viết tắt (không tải ảnh). */
+/**
+ * Ảnh tướng tuỳ chọn: đặt file assets/icons/{id}.png (id lấy trong heroes.json).
+ * Không có file thì hiện chữ viết tắt trên nền màu theo lớp tướng.
+ */
+@Composable
+fun rememberHeroIcon(hero: Hero?): ImageBitmap? {
+    val ctx = LocalContext.current
+    return remember(hero?.id) {
+        if (hero == null) null else loadIcon(ctx, hero.id)
+    }
+}
+
+private fun loadIcon(ctx: Context, id: String): ImageBitmap? = try {
+    ctx.assets.open("icons/$id.png").use { stream ->
+        BitmapFactory.decodeStream(stream)?.asImageBitmap()
+    }
+} catch (_: Exception) {
+    null
+}
+
+/** Ô tướng hình vuông: có ảnh thì hiện ảnh, không thì chữ viết tắt. */
 @Composable
 fun HeroBadge(hero: Hero?, size: Dp, border: Color = Color.Transparent, modifier: Modifier = Modifier) {
     val shape = RoundedCornerShape(10.dp)
+    val icon = rememberHeroIcon(hero)
     Box(
         modifier = modifier
             .size(size)
@@ -80,15 +110,20 @@ fun HeroBadge(hero: Hero?, size: Dp, border: Color = Color.Transparent, modifier
             .border(BorderStroke(2.dp, border), shape),
         contentAlignment = Alignment.Center
     ) {
-        if (hero != null) {
-            Text(
+        when {
+            icon != null -> Image(
+                bitmap = icon,
+                contentDescription = hero?.name,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize()
+            )
+            hero != null -> Text(
                 text = initials(hero.name),
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
                 fontSize = (size.value * 0.34f).sp
             )
-        } else {
-            Text(text = "+", color = Pal.sub, fontSize = (size.value * 0.4f).sp)
+            else -> Text(text = "+", color = Pal.sub, fontSize = (size.value * 0.4f).sp)
         }
     }
 }

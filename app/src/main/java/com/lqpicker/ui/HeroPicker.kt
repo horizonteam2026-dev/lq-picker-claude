@@ -53,6 +53,7 @@ fun HeroPicker(vm: DraftViewModel, target: PickTarget) {
     }
 
     val title = when (target.team) {
+        Team.SELF -> "Chọn tướng của bạn"
         Team.ALLY -> "Chọn đồng đội"
         Team.ENEMY -> "Chọn đối thủ"
         Team.BAN -> "Chọn tướng bị cấm"

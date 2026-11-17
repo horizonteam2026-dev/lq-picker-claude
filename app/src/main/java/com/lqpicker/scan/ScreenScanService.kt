@@ -255,8 +255,10 @@ class ScreenScanService : Service() {
             ScanBus.latest = ScanResult(r.allyIds, r.enemyIds, System.currentTimeMillis())
         }
 
-        val top = SuggestionEngine.suggest(heroes, allies, enemies, ScanBus.lane, taken, limit = 4)
-        val notes = SuggestionEngine.analyze(allies, enemies)
+        // Chỉ gợi ý trong số tướng người chơi đã sở hữu.
+        val pool = OwnedPrefs.filter(heroes, OwnedPrefs.load(this))
+        val top = SuggestionEngine.suggest(pool, allies, enemies, ScanBus.lane, taken, limit = 4)
+        val notes = SuggestionEngine.analyze(allies, enemies) + ItemAdvisor.advise(null, allies, enemies)
         val conf = SuggestionEngine.confidence(allies.size, enemies.size)
         val status = if (allies.isEmpty() && enemies.isEmpty()) {
             "Chưa thấy tướng nào được chọn · gợi ý chung theo vị trí (độ tin cậy $conf)"
