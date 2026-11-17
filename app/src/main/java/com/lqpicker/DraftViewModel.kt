@@ -117,7 +117,7 @@ class DraftViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Lưu danh sách tướng đã sở hữu. null = có tất cả. */
-    fun setOwned(ids: Set<String>?) {
+    fun saveOwned(ids: Set<String>?) {
         owned = ids
         OwnedPrefs.save(appCtx, ids)
     }

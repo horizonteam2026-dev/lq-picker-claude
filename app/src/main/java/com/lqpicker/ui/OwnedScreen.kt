@@ -57,7 +57,7 @@ fun OwnedScreen(vm: DraftViewModel) {
 
     fun toggle(id: String) {
         val base: Set<String> = owned ?: vm.heroes.map { it.id }.toSet()
-        vm.setOwned(if (id in base) base - id else base + id)
+        vm.saveOwned(if (id in base) base - id else base + id)
     }
 
     Column(
@@ -73,9 +73,9 @@ fun OwnedScreen(vm: DraftViewModel) {
         ) {
             Pill(text = "← Quay lại", selected = false, onClick = vm::closeOwned)
             Spacer(Modifier.weight(1f))
-            Pill(text = "Chọn hết", selected = false, onClick = { vm.setOwned(null) })
+            Pill(text = "Chọn hết", selected = false, onClick = { vm.saveOwned(null) })
             Spacer(Modifier.width(6.dp))
-            Pill(text = "Bỏ hết", selected = false, onClick = { vm.setOwned(emptySet()) })
+            Pill(text = "Bỏ hết", selected = false, onClick = { vm.saveOwned(emptySet()) })
         }
         Text("Tướng của tôi", color = Pal.text, fontSize = 20.sp, fontWeight = FontWeight.Bold)
         Text(
