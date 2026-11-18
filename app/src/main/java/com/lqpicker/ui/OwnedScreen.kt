@@ -73,9 +73,11 @@ fun OwnedScreen(vm: DraftViewModel) {
         ) {
             Pill(text = "← Quay lại", selected = false, onClick = vm::closeOwned)
             Spacer(Modifier.weight(1f))
-            Pill(text = "Chọn hết", selected = false, onClick = { vm.saveOwned(null) })
-            Spacer(Modifier.width(6.dp))
-            Pill(text = "Bỏ hết", selected = false, onClick = { vm.saveOwned(emptySet()) })
+            Row(Modifier.tourTarget("owned_bulk")) {
+                Pill(text = "Chọn hết", selected = false, onClick = { vm.saveOwned(null) })
+                Spacer(Modifier.width(6.dp))
+                Pill(text = "Bỏ hết", selected = false, onClick = { vm.saveOwned(emptySet()) })
+            }
         }
         Text("Tướng của tôi", color = Pal.text, fontSize = 20.sp, fontWeight = FontWeight.Bold)
         Text(
@@ -89,10 +91,13 @@ fun OwnedScreen(vm: DraftViewModel) {
             onValueChange = { query = it },
             singleLine = true,
             placeholder = { Text("Tìm tướng") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth().tourTarget("owned_search")
         )
         Spacer(Modifier.height(10.dp))
-        LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        LazyRow(
+            modifier = Modifier.tourTarget("owned_lane"),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
             item(key = "all") {
                 Pill(text = "Tất cả", selected = laneFilter == null, onClick = { laneFilter = null })
             }
@@ -110,7 +115,7 @@ fun OwnedScreen(vm: DraftViewModel) {
             contentPadding = PaddingValues(vertical = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxSize().tourTarget("owned_grid")
         ) {
             items(list, key = { it.id }) { h ->
                 OwnTile(h, on = isOn(h.id)) { toggle(h.id) }

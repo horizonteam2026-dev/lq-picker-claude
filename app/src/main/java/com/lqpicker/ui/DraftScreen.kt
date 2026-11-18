@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -47,6 +48,7 @@ import com.lqpicker.Lane
 import com.lqpicker.PickTarget
 import com.lqpicker.Suggestion
 import com.lqpicker.Team
+import com.lqpicker.TourSteps
 import com.lqpicker.scan.ScanBus
 
 @Composable
@@ -66,17 +68,40 @@ fun DraftScreen(vm: DraftViewModel) {
 @Composable
 private fun DraftContent(vm: DraftViewModel) {
     val suggestions = vm.suggestions
+    val listState = rememberLazyListState()
+    // Vị trí các mục trong danh sách, để cuộn tới đúng phần hướng dẫn đang nói.
+    val itemsIdx = if (vm.itemTips.isNotEmpty()) 6 + (if (vm.notes.isNotEmpty()) 1 else 0) else -1
+    val titleIdx = 6 + (if (vm.notes.isNotEmpty()) 1 else 0) + (if (vm.itemTips.isNotEmpty()) 1 else 0)
+    LaunchedEffect(vm.tourStep) {
+        val key = TourSteps.all.getOrNull(vm.tourStep)?.key ?: return@LaunchedEffect
+        val idx = when (key) {
+            "coach" -> 1
+            "scan" -> 2
+            "lane" -> 3
+            "team" -> 4
+            "bans" -> 5
+            "items" -> itemsIdx
+            "suggest" -> titleIdx
+            else -> -1
+        }
+        if (idx >= 0) listState.animateScrollToItem(idx)
+    }
     LazyColumn(
+        state = listState,
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         item(key = "header") { Header(vm) }
-        item(key = "coach") { CoachCard(vm) }
-        item(key = "scan") { ScanCard() }
-        item(key = "lane") { LaneRow(selected = vm.lane, onSelect = vm::selectLane) }
-        item(key = "teams") { TeamsCard(vm) }
-        item(key = "bans") { BansRow(vm) }
+        item(key = "coach") { Box(Modifier.fillMaxWidth().tourTarget("coach")) { CoachCard(vm) } }
+        item(key = "scan") { Box(Modifier.fillMaxWidth().tourTarget("scan")) { ScanCard() } }
+        item(key = "lane") {
+            Box(Modifier.fillMaxWidth().tourTarget("lane")) {
+                LaneRow(selected = vm.lane, onSelect = vm::selectLane)
+            }
+        }
+        item(key = "teams") { Box(Modifier.fillMaxWidth().tourTarget("team")) { TeamsCard(vm) } }
+        item(key = "bans") { Box(Modifier.fillMaxWidth().tourTarget("bans")) { BansRow(vm) } }
         if (vm.notes.isNotEmpty()) {
             item(key = "notes") {
                 Panel(title = "PHÂN TÍCH ĐỘI HÌNH") {
@@ -86,16 +111,18 @@ private fun DraftContent(vm: DraftViewModel) {
         }
         if (vm.itemTips.isNotEmpty()) {
             item(key = "items") {
-                Panel(title = "TRANG BỊ GỢI Ý") {
+                Panel(title = "TRANG BỊ GỢI Ý", modifier = Modifier.tourTarget("items")) {
                     vm.itemTips.forEach { Reason("▸", Pal.good, it) }
                 }
             }
         }
         item(key = "title") {
-            Label(
-                text = "GỢI Ý CHO BẠN" + (vm.lane?.let { " · ${it.label}" } ?: ""),
-                color = Pal.gold
-            )
+            Box(Modifier.fillMaxWidth().tourTarget("suggest")) {
+                Label(
+                    text = "GỢI Ý CHO BẠN" + (vm.lane?.let { " · ${it.label}" } ?: ""),
+                    color = Pal.gold
+                )
+            }
         }
         if (!vm.hasAnyPick) {
             item(key = "hint") {
@@ -120,6 +147,8 @@ private fun Header(vm: DraftViewModel) {
             Text("Gợi ý chọn tướng", color = Pal.text, fontSize = 22.sp, fontWeight = FontWeight.Bold)
             Text("Bạn tự nhập tướng, app chỉ gợi ý", color = Pal.sub, fontSize = 12.sp)
         }
+        Pill(text = "?", selected = false, onClick = vm::startTour)
+        Spacer(Modifier.width(6.dp))
         Pill(text = "Tướng của tôi", selected = false, onClick = vm::openOwned)
         Spacer(Modifier.width(6.dp))
         Pill(text = "Làm lại", selected = false, onClick = vm::reset)
@@ -329,9 +358,9 @@ private fun SuggestionCard(rank: Int, s: Suggestion) {
 }
 
 @Composable
-private fun Panel(title: String, content: @Composable () -> Unit) {
+private fun Panel(title: String, modifier: Modifier = Modifier, content: @Composable () -> Unit) {
     Column(
-        Modifier
+        modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(14.dp))
             .background(Pal.surface)

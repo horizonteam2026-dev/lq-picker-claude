@@ -9,6 +9,21 @@ import android.content.Context
 object OwnedPrefs {
     private const val FILE = "lq_prefs"
     private const val KEY = "owned"
+    private const val TOUR_KEY = "tour_done"
+
+    /** Đã xem hướng dẫn chưa. Lỗi đọc thì coi như đã xem để không làm phiền. */
+    fun isTourDone(ctx: Context): Boolean = try {
+        ctx.getSharedPreferences(FILE, Context.MODE_PRIVATE).getBoolean(TOUR_KEY, false)
+    } catch (_: Exception) {
+        true
+    }
+
+    fun setTourDone(ctx: Context, done: Boolean) {
+        try {
+            ctx.getSharedPreferences(FILE, Context.MODE_PRIVATE).edit().putBoolean(TOUR_KEY, done).apply()
+        } catch (_: Exception) {
+        }
+    }
 
     fun load(ctx: Context): Set<String>? = try {
         val p = ctx.getSharedPreferences(FILE, Context.MODE_PRIVATE)

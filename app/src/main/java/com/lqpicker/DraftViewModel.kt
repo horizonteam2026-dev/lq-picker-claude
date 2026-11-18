@@ -3,6 +3,7 @@ package com.lqpicker
 import android.app.Application
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
@@ -114,6 +115,8 @@ class DraftViewModel(app: Application) : AndroidViewModel(app) {
 
     fun closeOwned() {
         showOwned = false
+        // Rời màn hình tướng khi đang ở bước hướng dẫn thì chuyển sang bước kế tiếp.
+        if (tourStep >= 0 && TourSteps.all[tourStep].screen == TourScreen.OWNED) nextTour()
     }
 
     /** Lưu danh sách tướng đã sở hữu. null = có tất cả. */
@@ -172,6 +175,46 @@ class DraftViewModel(app: Application) : AndroidViewModel(app) {
         enemies = List(ENEMY_SLOTS) { null }
         bans = emptyList()
         picker = null
+    }
+
+    /** Hướng dẫn lần đầu. -1 = đang tắt. Bước đầu tiên là chọn tướng sở hữu. */
+    var tourStep by mutableIntStateOf(-1)
+        private set
+
+    /** Màn hình chúc may mắn sau khi hoàn tất hướng dẫn. */
+    var celebrate by mutableStateOf(false)
+        private set
+
+    fun startTour() = goTourStep(0)
+
+    fun nextTour() {
+        val next = tourStep + 1
+        if (next > TourSteps.all.lastIndex) finishTour(show = true) else goTourStep(next)
+    }
+
+    fun skipTour() = finishTour(show = false)
+
+    fun dismissCelebrate() {
+        celebrate = false
+    }
+
+    private fun goTourStep(i: Int) {
+        tourStep = i
+        picker = null
+        showOwned = TourSteps.all[i].screen == TourScreen.OWNED
+    }
+
+    private fun finishTour(show: Boolean) {
+        tourStep = -1
+        showOwned = false
+        picker = null
+        celebrate = show
+        OwnedPrefs.setTourDone(appCtx, true)
+    }
+
+    // Đặt sau khai báo các trạng thái trên để không bị ghi đè khi khởi tạo.
+    init {
+        if (!OwnedPrefs.isTourDone(appCtx)) startTour()
     }
 
     companion object {
